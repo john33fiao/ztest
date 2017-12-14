@@ -1,0 +1,7 @@
+/.metadata/
+/.recommenders/
+/Servers/
+*.class
+*.jar
+/RemoteSystemsTempFiles/
+/sqldeveloper/
