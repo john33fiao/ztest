@@ -11,11 +11,13 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script>
 	var result = false;
+	var url = "delete.do?idx="+${bean.sabun };
 		$(function(){
 			$('form').submit(function(){
 				return result;
 			});
 			$('button').eq(0).hide();
+			$('button').eq(3).hide();
 			$('button').eq(1).click(function(){
 				$('button').eq(0).show();
 				$('button').eq(1).hide();
@@ -24,6 +26,14 @@
 				$('h1').html("Update <small>page</small>");
 				$('input').eq(1).prop('readonly', false);
 				$('input').eq(3).prop('readonly', false);
+			});
+			$('button').eq(2).click(function(){
+				$('button').eq(3).show();
+				$('button').eq(1).hide();
+				$('button').eq(2).hide();
+			});
+			$('button').eq(3).click(function(){
+				$(location).attr("href", url);
 			});
 		});
 	</script>
@@ -51,6 +61,7 @@
 		<button type="submit" class="btn btn-default">확인</button>
 		<button type="button" class="btn btn-default">수정</button>
 		<button type="button" class="btn btn-default">삭제</button>
+		<button type="button" class="btn btn-default">삭제 확인</button>
 	</form>
 </body>
 </html>

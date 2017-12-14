@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.hb.controller.AddController;
+import com.hb.controller.DeleteController;
 import com.hb.controller.DetailController;
 import com.hb.controller.InsertController;
 import com.hb.controller.ListController;
@@ -43,6 +44,8 @@ public class FrontController extends HttpServlet{
 			controll = new DetailController();
 		}else if("/update.do".equals(url)) {
 			controll = new UpdateController();
+		}else if("/delete.do".equals(url)) {
+			controll = new DeleteController();
 		}
 		
 		String viewName = controll.execute(req);
