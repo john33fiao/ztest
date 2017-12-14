@@ -17,37 +17,6 @@ public class GuestDao {
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 
-	public void insertOne(int sabun, String name, String nalja, int pay) {
-		String sql = "insert into guest01 (sabun, name, nalja, pay) ";
-		sql += "values (?, ?, to_date(?, 'YYYY-MM-DD'), ?) ";
-		Object[] objs = { sabun, name, nalja, pay };
-		executeUpdate(sql, objs);
-	}
-
-	public List<GuestDto> selectAll() {
-		String sql = "select * from guest01";
-
-		List<GuestDto> list = executeQuery(sql, new Object[] {});
-
-		return list;
-	}
-
-	public GuestDto selectOne(int sabun) {
-		String sql = "select * from guest01 where sabun = ?";
-		List<GuestDto> list = executeQuery(sql, new Object[] { sabun });
-		return list.get(0);
-	}
-
-	public void updateOne(int sabun, String name, int pay) {
-		String sql = "update guest01 set name = ?, pay = ? where sabun =?";
-		executeUpdate(sql, new Object[] { name, pay, sabun });
-	}
-
-	public void deleteOne(int sabun) {
-		String sql = "delete from guest01 where sabun =?";
-		executeUpdate(sql, new Object[] {sabun});
-	}
-
 	public GuestDao() {
 		try {
 			Class.forName(driver);
@@ -57,13 +26,41 @@ public class GuestDao {
 		}
 	}
 
+	public List<GuestDto> selectAll() {
+		String sql = "select * from guest01";
+		List<GuestDto> list = executeQuery(sql, new Object[] {});
+		return list;
+	}
+
+	public GuestDto selectOne(int sabun) {
+		String sql = "select * from guest01 where sabun = ?";
+		List<GuestDto> list = executeQuery(sql, new Object[] { sabun });
+		return list.get(0);
+	}
+
+	public void insertOne(int sabun, String name, String nalja, int pay) {
+		String sql = "insert into guest01 (sabun, name, nalja, pay) ";
+		sql += "values (?, ?, to_date(?, 'YYYY-MM-DD'), ?) ";
+		Object[] objs = { sabun, name, nalja, pay };
+		executeUpdate(sql, objs);
+	}
+
+	public void updateOne(int sabun, String name, int pay) {
+		String sql = "update guest01 set name = ?, pay = ? where sabun =?";
+		executeUpdate(sql, new Object[] { name, pay, sabun });
+	}
+
+	public void deleteOne(int sabun) {
+		String sql = "delete from guest01 where sabun =?";
+		executeUpdate(sql, new Object[] { sabun });
+	}
+
 	private List executeQuery(String sql, Object[] objs) {
 		List<GuestDto> list = new ArrayList<GuestDto>();
 		try {
 			pstmt = conn.prepareStatement(sql);
-			for (int i = 0; i < objs.length; i++) {
-				pstmt.setObject(i + 1, objs[i + 1]);
-			}
+			for (int i = 0; i < objs.length; i++)
+				pstmt.setObject(i + 1, objs[i ]);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				GuestDto bean = new GuestDto();
@@ -85,7 +82,7 @@ public class GuestDao {
 		try {
 			pstmt = conn.prepareStatement(sql);
 			for (int i = 0; i < objs.length; i++) {
-				pstmt.setObject(i, objs[i]);
+				pstmt.setObject(i + 1, objs[i]);
 			}
 			pstmt.executeUpdate();
 		} catch (Exception e) {
