@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,19 +18,19 @@
 	</h1>
 	<form action="insert.do" class="form-horizontal" method="post" >
 		<div class="form-group">
-			<label for="">ป็น๘</label>
+			<label for="">์ฌ๋ฒ</label>
 			<input type="text" class="form-control" name="sabun" id="" placeholder="sabun" />
 		</div>
 		<div class="form-group">
-			<label for="">ภฬธง</label>
+			<label for="">์ด๋ฆ</label>
 			<input type="text" class="form-control" name="name" id="" placeholder="name" />
 		</div>
 		<div class="form-group">
-			<label for="">ณฏยฅ</label>
+			<label for="">๋ ์ง</label>
 			<input type="date" class="form-control" name="nalja" id="" />
 		</div>
 		<div class="form-group">
-			<label for="">ฑÝพื</label>
+			<label for="">๊ธ์•ก</label>
 			<input type="text" class="form-control" name="pay" id="" placeholder="pay" />
 		</div>
 		<button type="submit" class="btn btn-default">submit</button>
