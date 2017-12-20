@@ -1,4 +1,4 @@
-/.metadata/
+﻿/.metadata/
 /.recommenders/
 /Servers/
 *.class
@@ -6,4 +6,5 @@
 /RemoteSystemsTempFiles/
 /sqldeveloper/
 /teacher/
-/라이브러리&프로그램/
+/lib/
+/.metadata/

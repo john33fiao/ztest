@@ -13,10 +13,11 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/ztest/라이브러리/json-simple-1.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/ztest/라이브러리/jstl-1.2.jar"/>
-	<classpathentry kind="lib" path="C:/ztest/라이브러리/ojdbc14.jar"/>
-	<classpathentry kind="lib" path="C:/ztest/라이브러리/standard-1.1.2.jar"/>
-	<classpathentry kind="lib" path="C:/ztest/라이브러리/taglibs-standard-jstlel-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/ztest/라이브러리&amp;프로그램/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/ztest/라이브러리&amp;프로그램/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/ztest/라이브러리&amp;프로그램/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="C:/ztest/라이브러리&amp;프로그램/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="C:/ztest/라이브러리&amp;프로그램/standard-1.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/ztest/라이브러리&amp;프로그램/taglibs-standard-jstlel-1.2.5.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
