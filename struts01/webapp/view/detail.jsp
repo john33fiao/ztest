@@ -13,24 +13,30 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <body>
-	<h1>list page</h1>
-	<a href="add.action">글쓰기</a>
-	<table>
-		<tr>
-			<th>사번</th>
-			<th>이름</th>
-			<th>날짜</th>
-			<th>금액</th>
-		</tr>
-		<c:forEach items="${list }" var="bean">
-			<tr>
-				<td><a href="detail.action?idx=${bean.sabun }">${bean.sabun }</a></td>
-				<td><a href="detail.action?idx=${bean.sabun }">${bean.name }</a></td>
-				<td><a href="detail.action?idx=${bean.sabun }">${bean.nalja }</a></td>
-				<td><a href="detail.action?idx=${bean.sabun }">${bean.pay }</a></td>
-			</tr>
-		</c:forEach>
-	</table>
-
+<h1>detail page</h1>
+<table>
+	<tr>
+		<td>sabun</td>
+		<td>${bean.sabun }</td>
+	</tr>
+	<tr>
+		<td>name</td>
+		<td>${bean.name }</td>
+	</tr>
+	<tr>
+		<td>nalja</td>
+		<td>${bean.nalja }</td>
+	</tr>
+	<tr>
+		<td>pay</td>
+		<td>${bean.pay }</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+		<a href="edit.action?idx=${bean.sabun }">[수정]</a>
+		<a href="del.action?idx=${bean.sabun }">[삭제]</a>
+		</td>
+	</tr>
+</table>
 </body>
 </html>
